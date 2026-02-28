@@ -1,0 +1,1671 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hide desktop body on mobile by default */
+.desktop-body {
+    display: none;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
+    padding-top: 175px;
+}
+
+/* Ensure Header sits on top of the image */
+.main-header {
+    position: relative;
+    z-index: 10;
+    background: transparent;
+}
+
+/* --- Top Brand Bar --- */
+.brand-bar {
+    background: #A1A58F;
+    width: 100%;
+    height: 120px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.brand-logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+.header-title-img {
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Hide desktop header logo on mobile by default */
+.desktop-title-logo {
+    display: none;
+}
+
+.divider-line {
+    width: 90%;
+    height: 1px;
+    background: #818472;
+    border: 1px solid #818472;
+    margin: 5px auto;
+}
+
+.brand-subtitle {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: 0px 2px 3px #A9B37C;
+    margin-bottom: 5px;
+    padding: 0 5px;
+}
+
+/* --- Middle Dark Strip --- */
+.header-mid-border {
+    width: 100%;
+    height: 5px;
+    background: #616357;
+}
+
+/* --- Navigation Bar --- */
+.nav-bar {
+    background: #DDD0EA;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    direction: ltr;
+    /* Keeps icons L-to-R */
+}
+
+/* Grouped Left Icons */
+.nav-left-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.bookmark-icon {
+    width: 22px;
+    height: auto;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 5px;
+    height: 30px;
+    flex-grow: 1;
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-family: 'Jameel Noori Nastaleeq', serif, 'Arial';
+    text-align: right;
+    font-size: 14px;
+    color: #777474;
+}
+
+.search-btn {
+    background: #7E816F;
+    border: none;
+    width: 35px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-btn img {
+    width: 16px;
+    height: 16px;
+}
+
+/* --- Mobile Bottom Navigation Bar --- */
+.bottom-bar-bottom-row {
+    background: #DDD0EA;
+    width: 100%;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.46);
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.mobile-navigation {
+    display: flex;
+    align-items: center;
+    width: 100% !important;
+    height: 100%;
+    gap: 2px;
+    padding: 0 2px !important;
+    margin: 0 !important;
+}
+
+.m-nav-link {
+    display: block;
+    flex: 1;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-family: 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: clamp(9px, 3.6vw, 18px);
+    text-align: center;
+    white-space: nowrap;
+    overflow: visible;
+    padding: 0 2px;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+/* Purple style buttons (مضامین, طنز و مزاح, مزید...) */
+.m-nav-link.color-purple {
+    background: #F0EDF3;
+    border: 1px solid #D0B6D2;
+    color: #6E0F74;
+}
+
+/* Dark/green style buttons (الفاظ کی دنیا, ویڈیوز) */
+.m-nav-link.color-dark {
+    background: #E4E4E4;
+    border: 1px solid #B4B7A6;
+    color: #3B3D31;
+}
+
+/* --- Hero Section --- */
+.hero-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -25px;
+    /* Overlap effect */
+    position: relative;
+    z-index: 1;
+    padding-bottom: 20px;
+}
+
+.hero-image {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border: 3px solid #898F6B;
+    background-color: #fff;
+    display: block;
+}
+
+/* ... (Keep all previous Header & Hero styles exactly as they were) ... */
+
+/* --- Sidebar Menu Styles --- */
+.side-menu {
+    position: fixed;
+    top: 130px;
+    right: -300px;
+    width: 272px;
+    background: rgba(231, 235, 214, 0.95);
+    border: 1px solid #CACCC4;
+    border-radius: 0 0 0 10px;
+    z-index: 100;
+    transition: right 0.4s ease-in-out;
+    box-shadow: -2px 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+/* FIXED: Added 'direction: ltr' to force the button to the Right */
+.menu-header-row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* Pushes content to the right end */
+    padding: 10px 15px;
+    direction: ltr;
+    /* CRITICAL: Overrides the page's RTL setting for this row only */
+}
+
+.close-btn {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+/* Menu Items (Already fixed to LTR) */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: background 0.2s;
+    direction: ltr;
+}
+
+/* ... (Rest of the CSS remains exactly the same) ... */
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.active-item {
+    background: rgba(217, 217, 217, 0.5);
+}
+
+.text-en {
+    font-family: 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.text-ur {
+    font-family: 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.color-green {
+    color: #444A25;
+}
+
+.color-gold {
+    color: #82733B;
+}
+
+.menu-divider {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.16);
+    margin: 2px 20px;
+}
+
+.no-border {
+    border: none;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+
+.menu-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Recent Posts Section --- */
+.recent-posts-section {
+    width: 100%;
+    padding-top: 20px;
+    background-color: #f4f4f4;
+    /* Matches body bg */
+    padding-bottom: 20px;
+}
+
+/* Header Row: English Left, Urdu Right */
+.section-header-row {
+    display: flex;
+    justify-content: space-between;
+    /* Pushes items to edges */
+    align-items: center;
+    padding: 0 20px;
+    /* Aligned with grid margins */
+    margin-bottom: 20px;
+    direction: ltr;
+    /* Forces layout: English-Left, Urdu-Right */
+}
+
+.section-title-en {
+    font-family: 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #3F3636;
+}
+
+.section-title-ur {
+    font-family: 'Times New Roman', serif;
+    /* Or Jameel Noori if preferred */
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #201F1F;
+    text-align: right;
+}
+
+/* Grid Layout */
+.posts-grid {
+    display: grid;
+    /* Create 2 columns. 1fr means "1 fraction of available space" */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    /* Space between columns */
+    padding: 0 20px;
+    /* Outer margins */
+    direction: ltr;
+    /* Ensures Card 1 is Left, Card 2 is Right */
+}
+
+/* Card Styling */
+.post-card {
+    display: flex;
+    flex-direction: column;
+    /* Ensuring text aligns right inside the card */
+    align-items: flex-end;
+}
+
+.post-image-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* Makes it a perfect square like 182x182 */
+    margin-bottom: 10px;
+    overflow: hidden;
+    /* Optional: borders/shadows if needed, none specified on image itself */
+}
+
+.post-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-title {
+    font-family: 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: right;
+    color: #000000;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+/* ... (Previous CSS) ... */
+
+.post-date {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    /* CHANGED: Align date to the Left */
+    text-align: left;
+
+    color: #000000;
+    width: 100%;
+    margin-top: 2px;
+}
+
+/* ... (Rest of CSS) ... */
+
+/* Button Container */
+.view-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.view-more-btn {
+    background: #7E816F;
+    border-radius: 4px;
+    padding: 2px 25px;
+    border: none;
+
+    font-family: 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* Bottom Divider */
+.section-divider {
+    width: calc(100% - 40px);
+    /* Full width minus margins */
+    height: 1px;
+    background: rgba(126, 129, 111, 0.5);
+    /* Line 2 color */
+    margin: 0 auto;
+    /* Centered */
+    margin-top: 10px;
+}
+
+/* Import Poppins Font (Add this to top of CSS file if not present) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+/* =========================================
+   NEW HEADER STYLES (Mobile First - LTR)
+   ========================================= */
+.main-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+/* --- Top Green Bar --- */
+.header-top-bar {
+    background: #A1A58F;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.top-bar-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.brand-ur-logo {
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    /* Added to push it down slightly */
+}
+
+.urdu-title-logo {
+    width: 380px;
+    max-width: 95%;
+    height: auto;
+    object-fit: contain;
+}
+
+.mobile-green-divider {
+    height: 0px;
+    border-bottom: 1px solid #818472;
+    width: 100%;
+}
+
+.brand-en-title {
+    height: 28px;
+    max-height: 28px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: clamp(11px, 4.4vw, 19px);
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: 0px 2px 3px #A9B37C;
+}
+
+/* --- Main Divider --- */
+.header-main-divider {
+    width: 100%;
+    height: 3px;
+    max-height: 3px;
+    background: #616357;
+    position: relative;
+    z-index: 10;
+    transition: max-height 0.3s ease, margin 0.3s ease, opacity 0.3s ease;
+}
+
+/* --- Bottom Purple Bar --- */
+.header-bottom-bar {
+    background: #DDD0EA;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 14.6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 1;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.main-header.hide-bottom .brand-en-title,
+.main-header.hide-bottom .header-main-divider,
+.main-header.hide-bottom .header-bottom-bar {
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.bottom-bar-top-row {
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 13px;
+    gap: 15px;
+}
+
+/* Hide desktop nav */
+.desktop-navigation {
+    display: none;
+}
+
+/* --- Search Box --- */
+.header-search-box {
+    display: flex;
+    flex: 1;
+    height: 28px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-family: 'Jameel Noori Nastaleeq', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #777474;
+    background: transparent;
+    text-align: right;
+}
+
+.search-btn {
+    width: 28px;
+    height: 28px;
+    background: #7E816F;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* --- Hamburger --- */
+.hamburger-icon {
+    width: 28px;
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger-icon .bar {
+    height: 3px;
+    width: 100%;
+    background: #525545;
+    border-radius: 2px;
+}
+
+/* --- Mobile Purple Divider --- */
+.mobile-purple-divider {
+    height: 0px;
+    border-bottom: 1px solid #616357;
+    width: 100%;
+}
+
+/* --- Mobile Navigation Row --- */
+.bottom-bar-bottom-row {
+    height: 37px;
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+}
+
+.mobile-navigation {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.m-nav-link {
+    font-family: 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.color-purple {
+    color: #6E0F74;
+}
+
+.color-dark {
+    color: #3B3D31;
+}
+
+
+/* =========================================
+   FOOTER STYLES (Mobile First)
+   ========================================= */
+.main-footer {
+    width: 100%;
+    position: relative;
+    background: #f4f4f4;
+}
+
+/* Social icon links — remove default anchor styling */
+a.social-icon {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    line-height: 0;
+}
+
+/* --- Mobile Footer --- */
+.mobile-footer {
+    width: 100%;
+    margin: 0 auto;
+    background: #DEE0CD;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Section (Green) */
+.mobile-footer-top {
+    background: #A1A58F;
+    height: 95px;
+    /* Increased from 83px to properly fit the larger logo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.mobile-footer-top .brand-ur-logo {
+    height: 60px;
+    /* Increased container height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-footer-top .urdu-title-logo {
+    width: 380px;
+    max-width: 95%;
+    height: auto;
+    object-fit: contain;
+}
+
+.mobile-footer-top .brand-en-title {
+    font-size: clamp(14px, 4.5vw, 19px);
+    /* Dynamic scaling to fit small screens */
+    height: auto;
+    margin-bottom: 3px;
+    margin-top: 5px;
+    text-align: center;
+    max-width: 95vw;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #000000;
+    text-shadow: 0px 2px 3px #A9B37C;
+}
+
+/* Middle Section (Links Grid) */
+.mobile-footer-middle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 25px;
+    min-height: 290px;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 25px;
+    column-gap: 5px;
+    width: 100%;
+    max-width: 350px;
+    direction: rtl;
+    justify-items: center;
+    align-items: start;
+    /* align items to the top so taller text doesn't displace the Urdu text */
+}
+
+/* Force the 10th item (Contact) into the center column (Column 2) of row 4 */
+.footer-links-grid>*:last-child {
+    grid-column: 2;
+    margin-top: -24px;
+    /* Pull it up to counteract the taller 'World of Words' item in the row above */
+}
+
+/* Base Link Styling */
+.footer-link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 5px;
+}
+
+.text-ur {
+    font-family: 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #444A25;
+    text-align: right;
+}
+
+.text-en {
+    font-family: 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #444A25;
+    text-align: right;
+}
+
+/* Variations from Figma */
+.color-gold {
+    color: #82733B;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Bottom Section */
+.mobile-footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 16px;
+    padding-top: 15px;
+    position: relative;
+}
+
+.footer-divider-thick {
+    width: 100%;
+    border-top: 2px solid #4B5024;
+    margin-bottom: 10px;
+}
+
+.footer-bottom-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #4B5024;
+    text-align: center;
+    margin-bottom: 11px;
+}
+
+.footer-bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+    /* Added internal padding instead of exact absolute */
+    max-width: 428px;
+}
+
+.privacy-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #4B5024;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hide Desktop Footer Initially */
+.desktop-footer {
+    display: none;
+}
+
+
+/* =========================================
+   Mobile Email Connect Section
+   ========================================= */
+.mobile-connect-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px 30px;
+}
+
+.connect-card {
+    width: 100%;
+    max-width: 387px;
+    background: #F0F4DE;
+    border-radius: 5px;
+    padding: 20px 20px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.connect-title {
+    font-family: 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    color: #313520;
+    margin: 0 0 5px;
+    direction: rtl;
+}
+
+.connect-email-input-container {
+    width: 100%;
+    max-width: 305px;
+}
+
+.connect-email-input {
+    width: 100%;
+    height: 38px;
+    background: #D3D5C8;
+    border: 1px solid #A1A58F;
+    border-radius: 70px;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #313520;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.connect-email-input::placeholder {
+    color: #828865;
+}
+
+.connect-subscribe-btn {
+    width: 100%;
+    max-width: 305px;
+    height: 43px;
+    background: #51563C;
+    border-radius: 70px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    gap: 10px;
+}
+
+.connect-sub-en {
+    font-family: 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: clamp(14px, 4vw, 20px);
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+.connect-sub-ur {
+    font-family: 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: clamp(14px, 4vw, 20px);
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    direction: rtl;
+    white-space: nowrap;
+}
+
+.connect-follow-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #51563C;
+    margin: 5px 0 0;
+}
+
+.connect-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.connect-social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.connect-social-icon svg path {
+    fill: #51563C;
+}
+
+/* =========================================
+   DESKTOP STYLES (min-width: 1024px)
+   ========================================= */
+@media (min-width: 1024px) {
+
+    /* Hide mobile connect section on desktop */
+    .mobile-connect-section {
+        display: none;
+    }
+
+    .header-top-bar {
+        height: 78px;
+        padding: 0;
+    }
+
+    .top-bar-content {
+        flex-direction: row-reverse;
+        /* Urdu on right, English on left */
+        justify-content: center;
+        /* Center them horizontally */
+        align-items: center;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        height: 100%;
+        gap: 60px;
+        /* Space between them */
+    }
+
+    .brand-ur-logo {
+        height: 100%;
+        width: auto;
+    }
+
+    .urdu-title-logo {
+        width: 561px;
+        height: 67px;
+    }
+
+    .brand-en-title {
+        height: 100%;
+        font-family: 'Trebuchet MS', sans-serif;
+        font-size: 19.25px;
+        color: #000000;
+        text-shadow: 0px 2px 3px #A9B37C;
+    }
+
+    .mobile-green-divider {
+        display: none;
+    }
+
+    .header-main-divider {
+        height: 5px;
+        background: #616357;
+    }
+
+    .main-header.hide-bottom .brand-en-title {
+        max-height: 100px;
+        opacity: 1;
+        /* Keep English title visible on desktop */
+    }
+
+    .header-bottom-bar {
+        height: 81px;
+        box-shadow: none;
+        /* Desktop doesn't have the shadow in design */
+    }
+
+    .bottom-bar-top-row {
+        height: 100%;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 40px;
+        justify-content: space-between;
+    }
+
+    .mobile-purple-divider,
+    .bottom-bar-bottom-row,
+    .hamburger-icon {
+        display: none;
+    }
+
+    /* Search Bar size */
+    .header-search-box {
+        flex: none;
+        width: 587px;
+        height: 28px;
+    }
+
+    /* Desktop Navigation */
+    .desktop-navigation {
+        display: flex;
+        gap: 27px;
+        align-items: flex-start;
+    }
+
+    .desktop-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        gap: 5px;
+    }
+
+    .desktop-nav-item .text-ur {
+        font-family: 'Times New Roman', serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .desktop-nav-item .text-en {
+        font-family: 'Times New Roman', serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    /* Specific text alignments based on Figma */
+    .item-contact .text-ur {
+        text-align: right;
+    }
+
+    .item-contact .text-en {
+        text-align: right;
+    }
+
+    .item-world-words .text-ur {
+        text-align: right;
+    }
+
+    .item-world-words .text-en {
+        text-align: center;
+    }
+
+    .item-humor .text-ur {
+        text-align: right;
+    }
+
+    .item-humor .text-en {
+        text-align: right;
+    }
+
+    .item-articles .text-ur {
+        text-align: right;
+    }
+
+    .item-articles .text-en {
+        text-align: right;
+    }
+
+    .item-home .text-ur {
+        text-align: center;
+    }
+
+    .item-home .text-en {
+        text-align: center;
+    }
+
+    .color-brown {
+        color: #82733B;
+    }
+
+    .color-darkgreen {
+        color: #444A25;
+    }
+
+    /* =========================================
+       DESKTOP BODY STYLES
+       ========================================= */
+
+    /* Hide mobile body on desktop */
+    main {
+        display: none;
+    }
+
+    .recent-posts-section {
+        display: none;
+    }
+
+    /* Desktop body container */
+    .desktop-body {
+        display: block;
+        position: relative;
+        width: 100%;
+        min-height: 680px;
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+
+    /* ------ Left Sidebar ------ */
+    .d-sidebar {
+        position: absolute;
+        width: 272px;
+        height: 435px;
+        left: calc(50% - 272px/2 - 536px);
+        top: 10px;
+        background: rgba(231, 235, 214, 0.95);
+        border: 1px solid #CACCC4;
+        z-index: 2;
+    }
+
+    .d-sidebar-header {
+        display: none;
+    }
+
+    .d-sidebar-content {
+        padding: 8px 15px;
+    }
+
+    .d-sidebar-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 5px;
+        text-decoration: none;
+    }
+
+    .d-sb-en {
+        font-family: 'Times New Roman', serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: right;
+        color: #444A25;
+    }
+
+    .d-sidebar-item:nth-child(odd) .d-sb-en {
+        color: #444A25;
+    }
+
+    .d-sidebar-item:nth-child(even) .d-sb-en {
+        color: #82733B;
+    }
+
+    /* Override: items 1,3,5,7 (1-indexed) in the link list = positions 1,5,9,13 in content children */
+    .d-sidebar-content a:nth-of-type(2) .d-sb-en,
+    .d-sidebar-content a:nth-of-type(4) .d-sb-en,
+    .d-sidebar-content a:nth-of-type(6) .d-sb-en,
+    .d-sidebar-content a:nth-of-type(8) .d-sb-en {
+        color: #82733B;
+    }
+
+    .d-sidebar-content a:nth-of-type(1) .d-sb-en,
+    .d-sidebar-content a:nth-of-type(3) .d-sb-en,
+    .d-sidebar-content a:nth-of-type(5) .d-sb-en,
+    .d-sidebar-content a:nth-of-type(7) .d-sb-en {
+        color: #444A25;
+    }
+
+    .d-sb-ur {
+        font-family: 'Times New Roman', serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: right;
+        color: #444A25;
+    }
+
+    .d-sidebar-content a:nth-of-type(2) .d-sb-ur,
+    .d-sidebar-content a:nth-of-type(4) .d-sb-ur,
+    .d-sidebar-content a:nth-of-type(6) .d-sb-ur,
+    .d-sidebar-content a:nth-of-type(8) .d-sb-ur {
+        color: #82733B;
+    }
+
+    .d-sidebar-content a:nth-of-type(1) .d-sb-ur,
+    .d-sidebar-content a:nth-of-type(3) .d-sb-ur,
+    .d-sidebar-content a:nth-of-type(5) .d-sb-ur,
+    .d-sidebar-content a:nth-of-type(7) .d-sb-ur {
+        color: #444A25;
+    }
+
+    .d-sidebar-line {
+        width: 229px;
+        height: 0px;
+        margin: 0 auto;
+        border: 1px solid rgba(0, 0, 0, 0.16);
+    }
+
+    /* ------ Center Posts Area ------ */
+    .d-posts-area {
+        position: absolute;
+        left: calc(50% - 594px/2 - 56px);
+        top: 0;
+        width: 594px;
+    }
+
+    .d-posts-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 20px;
+        padding-top: 10px;
+    }
+
+    .d-section-title-en {
+        font-family: 'Times New Roman', serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        text-decoration: underline;
+        color: #3F3636;
+    }
+
+    .d-section-title-ur {
+        font-family: 'Times New Roman', serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: right;
+        text-decoration: underline;
+        color: #201F1F;
+    }
+
+    .d-posts-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 182px);
+        grid-template-rows: repeat(2, auto);
+        gap: 24px;
+    }
+
+    .d-post-card {
+        width: 182px;
+    }
+
+    .d-post-img {
+        width: 182px;
+        height: 182px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .d-post-title {
+        font-family: 'Times New Roman', serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: right;
+        text-decoration: underline;
+        color: #000000;
+        margin-top: 10px;
+        min-height: 46px;
+    }
+
+    .d-post-date {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: right;
+        text-decoration: underline;
+        color: #000000;
+        margin-top: 4px;
+    }
+
+    .d-view-more-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+
+    .d-view-more-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 25px;
+        gap: 10px;
+        width: 100px;
+        height: 27px;
+        background: #7E816F;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        font-family: 'Times New Roman', serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    /* ------ Right Hero Image ------ */
+    .d-hero {
+        position: absolute;
+        width: 388px;
+        height: 473px;
+        right: calc(50% - 388px/2 - 478px);
+        top: -40px;
+        z-index: 1;
+    }
+
+    .d-hero-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 3px solid #898F6B;
+        box-sizing: border-box;
+    }
+
+    /* =========================================
+       FOOTER STYLES (Desktop First)
+       ========================================= */
+    .mobile-footer {
+        display: none;
+    }
+
+    /* Show desktop header logo, hide mobile header logo */
+    .desktop-title-logo {
+        display: block;
+    }
+
+    .mobile-title-logo {
+        display: none;
+    }
+
+    /* Footer Base */
+    .desktop-footer {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 208px;
+        background: #f4f4f4;
+    }
+
+    /* Rectangle 38 (Main BG) */
+    .d-footer-main {
+        position: absolute;
+        width: 100%;
+        height: 195px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0px;
+        background: #DEE0CD;
+    }
+
+    /* Rectangle 39 (Top Strip) */
+    .d-footer-top-strip {
+        position: absolute;
+        width: 100%;
+        height: 13px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 195px;
+        background: #A1A58F;
+    }
+
+    /* Footer Title SVG */
+    .footer-title-svg {
+        position: absolute;
+        width: 383px;
+        height: auto;
+        left: calc(50% - 383px/2 - 340px);
+        bottom: 84px;
+    }
+
+    /* Nadir Khan Sargiroh Urdu Vocabulary (English) */
+    .d-brand-text {
+        position: absolute;
+        width: 383px;
+        height: 22px;
+        left: calc(50% - 383px/2 - 340px);
+        bottom: 147px;
+        font-family: 'Trebuchet MS', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 22px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    /* مجھ سے جُڑیں! */
+    .d-social-msg {
+        position: absolute;
+        width: 141px;
+        height: 30px;
+        left: calc(50% - 141px/2 + 484.5px);
+        bottom: 140px;
+        font-family: 'Times New Roman', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 30px;
+        text-align: center;
+        color: #313520;
+    }
+
+    /* Line 13 (Divider) */
+    .d-footer-divider {
+        position: absolute;
+        width: 1116px;
+        height: 0px;
+        left: calc(50% - 1116px/2);
+        bottom: 65px;
+        border: 2px solid rgba(75, 80, 36, 0.25);
+    }
+
+    /* 2026 Copyright */
+    .d-copy {
+        position: absolute;
+        width: 422px;
+        height: 18px;
+        left: calc(50% - 422px/2 - 347px);
+        bottom: 33px;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        color: #4B5024;
+    }
+
+    /* Privacy & Policy */
+    .d-privacy {
+        position: absolute;
+        width: 106px;
+        height: 18px;
+        left: calc(50% - 106px/2 - 63px);
+        bottom: 33px;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        color: #4B5024;
+    }
+
+    /* Frame 52 (Subscribe Button) */
+    .d-sub-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 50px;
+        gap: 16px;
+        position: absolute;
+        width: 252px;
+        height: 43px;
+        left: calc(50% - 252px/2 + 429px);
+        bottom: 81px;
+        background: #51563C;
+        border-radius: 70px;
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .sub-en {
+        width: 79px;
+        height: 23px;
+        font-family: 'Times New Roman', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        color: #FFFFFF;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    .sub-ur {
+        width: 110px;
+        height: 23px;
+        font-family: 'Times New Roman', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        color: #FFFFFF;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    /* Frame 53 (Email Input) */
+    .d-email-input-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        gap: 16px;
+        position: absolute;
+        width: 288px;
+        height: 43px;
+        left: calc(50% - 288px/2 + 151px);
+        bottom: 81px;
+        background: #D3D5C8;
+        border: 1px solid #A1A58F;
+        border-radius: 70px;
+    }
+
+    .d-email-input {
+        width: 100%;
+        height: 18px;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        color: #828865;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+
+    .d-email-input::placeholder {
+        color: #828865;
+    }
+
+    /* facebook */
+    .icon-fb {
+        position: absolute;
+        width: 33px;
+        height: 33px;
+        left: calc(50% - 33px/2 + 541.5px);
+        bottom: 24px;
+    }
+
+    /* instagram */
+    .icon-ig {
+        position: absolute;
+        width: 33px;
+        height: 33px;
+        left: calc(50% - 33px/2 + 491.5px);
+        bottom: 24px;
+    }
+
+    /* youtube */
+    .icon-yt {
+        position: absolute;
+        width: 33px;
+        height: 33px;
+        left: calc(50% - 33px/2 + 441.5px);
+        bottom: 24px;
+    }
+}
