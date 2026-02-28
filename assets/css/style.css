@@ -301,15 +301,17 @@ body {
 
 .text-en {
     font-family: 'Times New Roman', serif;
-    font-size: 24px;
+    font-size: clamp(14px, 4.5vw, 24px);
     font-weight: 400;
+    white-space: nowrap;
 }
 
 .text-ur {
     font-family: 'Times New Roman', serif;
-    font-size: 24px;
+    font-size: clamp(14px, 4.5vw, 24px);
     font-weight: 700;
     text-align: right;
+    white-space: nowrap;
 }
 
 .color-green {
@@ -806,19 +808,21 @@ a.social-icon {
 .text-ur {
     font-family: 'Times New Roman', serif;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: clamp(14px, 4.5vw, 24px);
+    line-height: 1.2;
     color: #444A25;
     text-align: right;
+    white-space: nowrap;
 }
 
 .text-en {
     font-family: 'Times New Roman', serif;
     font-weight: 400;
-    font-size: 25px;
-    line-height: 29px;
+    font-size: clamp(14px, 4.5vw, 25px);
+    line-height: 1.2;
     color: #444A25;
     text-align: right;
+    white-space: nowrap;
 }
 
 /* Variations from Figma */
